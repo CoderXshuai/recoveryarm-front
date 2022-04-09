@@ -1,17 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+    <link rel="icon" href="favicon.ico">
+    <title>上肢康复</title>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+<header>
+    <h1>数据可视化展示云平台</h1>
+    <div class="showTime">当前时间：2020年3月17-0时54分14秒</div>
+</header>
+<section class="mainbox">
+    <div class="column">
+        <div class="panel line">
+            <h2>x轴角度变化折线图</h2>
+            <div class="chart" id="xAngle"></div>
+            <div class="panel-footer"></div>
+        </div>
+        <div class="panel line">
+            <h2>y轴角度变化折线图</h2>
+            <div class="chart" id="yAngle"></div>
+            <div class="panel-footer"></div>
+        </div>
+        <!-- <div class="panel pie1">
+          <h2>z轴角度变化折线图</h2>
+          <div class="chart" id="zAngle"></div>
+          <div class="panel-footer"></div>
+      </div> -->
+    </div>
+    <!-- 中间 -->
+    <div class="column">
+        <!-- 上边数字 -->
+        <div class="no">
+            <div class="no-hd">
+                <ul>
+                    <li class="exer_time">0s</li>
+                    <li class="score">0</li>
+                </ul>
+            </div>
+            <div class="no-bd">
+                <ul>
+                    <li>本次评测时长(s)</li>
+                    <li>本次判断评分</li>
+                </ul>
+            </div>
+        </div>
+        <div id="app"></div>
+    </div>
+    </div>
+    <div class="column">
+        <!-- <div class="panel bar1">
+          <h2>本次运动数据</h2>
+    <div class="exercise_data">
+      <div class="angle">
+        <ul>
+          <li>x轴角度：<span class="angle_x">0.000</span></li>
+          <li>y轴角度：<span class="angle_y">0.000</span></li>
+          <li>z轴角度：<span class="angle_z">0.000</span></li>
+        </ul>
+      </div>
+      <div class="angle_v">
+        <ul>
+          <li>x轴角速度：<span class="angle_vx">0.000</span></li>
+          <li>y轴角速度：<span class="angle_vy">0.000</span></li>
+          <li>z轴角速度：<span class="angle_vz">0.000</span></li>
+        </ul>
+      </div>
+      <div class="angle_a">
+        <ul>
+          <li>x轴加速度：<span class="angle_ax">0.000</span></li>
+          <li>y轴加速度：<span class="angle_ay">0.000</span></li>
+          <li>z轴加速度：<span class="angle_az">0.000</span></li>
+        </ul>
+      </div>
+    </div>
+      </div> -->
+        <div class="panel bar">
+            <!-- <h2>近七次评分统计</h2>
+          <div class="chart" id="bar2"></div>
+          <div class="panel-footer"></div> -->
+
+            <h2>z轴角度变化折线图</h2>
+            <div class="chart" id="zAngle"></div>
+            <div class="panel-footer"></div>
+        </div>
+
+        <div class="panel">
+            <div class="slider">
+                <h2>个性化康复方案</h2>
+                <div class="tip" id="tipform">根据您此次的判断评估结果，我们建议您在接下来的判断中采取以下判断方案：
+                    <br><br>（1）判断名称：大臂股四头肌判断
+                    <br><br>（2）适用范围：大臂肌肉虚弱、肘部手术后康复、因肘部问题造成困难等问题
+                    <br><br>（3）判断方法：1.坐起后，手臂自然下垂，背部弓起，使大臂前侧肌肉紧绷，维持5秒钟后放松。每天做三回，每回做三组，每组重复10至15次。
+                    <br><br>（4)注意事项：以上判断，用力时需吐气，放松时吸气，应避免憋气，建议于固定时间进行，以免遗忘判断内容由少至多、由单项至多项、循序渐进。
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="./js/toSignIn.js"></script>
+<script src="js/time.js"></script>
+<script src="js/echarts.min.js"></script>
+<script src="js/flexible.js"></script>
+<script src="./js/nullGraph.js"></script>
+<!-- <script src="js/index.js"></script> -->
+</body>
 </html>
