@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>患者信息</title>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+		<link rel="stylesheet" type="text/css" href="./css/homePage.css"/>
+	</head>
+	<body>
+		
+		<header>
+			<div class="header-left">
+				<a><img src="./images/blue.png"></a>
+				<span>上肢康复评分系统</span>
+			</div>
+			<div class="header-right">
+				<p class="username"></p>
+			</div>
+		</header>
+		
+		<main>
+			
+			<aside>
+				<ul id="list-ops">
+					<li>数据上传</li>
+					<li>用户数据</li>
+				</ul>
+			</aside>
+			
+			<section id="main-content">
+				<section id="part2">
+					<form method="post" action="" enctype="multipart/form-data">
+						<p>请选择上传的txt文件</p>
+						<div class="file-upload">
+							<input type="file" id="filer_input" class="filer_input" name="file" accept=".txt"/>
+							<div class="show-file">
+								<div class="no-file">
+									<img src="./images/upload.svg" />
+								</div>
+								<div class="have-file">
+									<img src="./images/text.png" />
+									<div class="file-info">
+										<span class="file-name"></span><span class="file-size"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<input class="submit" type="button" value="提交"/>
+					</form>
+					<div class="data-pre">
+						<p>数据预览</p>
+						<table class="data-table">
+							<tr>
+								<td>加速度X(g)</td>
+								<td>加速度Y(g)</td>
+								<td>加速度Z(g)</td>
+								<td>角速度X(°/s)</td>
+								<td>角速度Y(°/s)</td>
+								<td>角速度Z(°/s)</td>
+							</tr>
+							<tr>
+								<td rowspan="3" colspan="6" class="data-tip">暂无数据</td>
+							</tr>
+						</table>
+					</div>
+					<div class="mask-info" style="display: none;">
+						<div class="upload-tip">
+							<span class="file-tip">数据上传评级中</span><span class="loading"></span>
+						</div>
+					</div>
+				</section>
+				
+				<section id="part3">
+					<div class="user-content">
+						<div class="exercise">
+							<div class="user-table">
+								<table class="table-data">
+									<tr>
+										<td>用户编号</td>
+										<td>用户名称</td>
+										<td>训练时间</td>
+										<td>训练评分</td>
+										<td>操作</td>
+									</tr>
+								</table>
+							</div>
+							<div class="user-graph">
+								<div id="pie-user"></div>
+							</div>
+							<div class="user-graph">
+								<div id="do0" class="linear-user"></div>
+								<div id="do1" class="linear-user"></div>
+							</div>
+							<div class="user-graph">
+								<div id="do2" class="linear-user"></div>
+								<div id="do3" class="linear-user"></div>
+							</div>
+							<div class="user-graph">
+								<div id="do4" class="linear-user"></div>
+								<div id="do5" class="linear-user"></div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</section>
+		</main>
+		<script type="text/javascript" src="./js/jquery.min.js"></script>
+		<script type="text/javascript" src="./js/echarts.min.js"></script>
+		<script type="text/javascript" src="./js/dataTool.min.js"></script>
+		<script type="text/javascript" src="./js/patientPage.js"></script>
+		<script type="text/javascript" src="./js/patientFileupload.js"></script>
+		<script type="text/javascript" src="./js/patientUserData.js"></script>
+	</body>
+</html>

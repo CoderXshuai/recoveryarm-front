@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>上肢康复评分系统</title>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+		<link rel="stylesheet" type="text/css" href="./css/homePage.css"/>
+	</head>
+	<body>
+		
+		<header>
+			<div class="header-left">
+				<a><img src="./images/blue.png"></a>
+				<span>上肢康复评分系统</span>
+			</div>
+			<div class="header-right">
+				<p class="username">admin</p>
+				<div class="signOut">
+					退出登录
+				</div>
+			</div>
+		</header>
+		
+		<main>
+			
+			<aside>
+				<ul id="list-ops">
+					<li>数据概览</li>
+					<li>数据上传</li>
+					<li>用户数据</li>
+				</ul>
+			</aside>
+			
+			<section id="main-content">
+				<section id="part1">
+					<div class="info">
+						<div class="user">
+							<span><img class="user-icon" src="./images/user.svg"></img></span><span>总用户人数：</span><span id="userNum">0</span><span>人</span>
+						</div>
+						<div class="arm">
+							<span><img class="arm-icon" src="images/arm.svg"></img></span><span>总记录动作组：</span><span id="dataGroupNum">0</span><span>组</span>
+						</div>
+						<div class="data">
+							<span><img class="data-icon" src="images/data.svg"></img></span><span>总记录数据帧：</span><span id="dataNum">0</span><span>帧</span>
+						</div>
+					</div>
+					<div class="graph">
+						<div id="pie1"></div>
+						<div id="pie2">
+							<table>
+								<tr>
+									<td>评级</td>
+									<td>标准</td>
+								</tr>
+								<tr>
+									<td>0级</td>
+									<td>基本无反应或有轻微抖动</td>
+								</tr>
+								<tr>
+									<td>1级</td>
+									<td>不能完整完成动作，但可以进行运动</td>
+								</tr>
+								<tr>
+									<td>2级</td>
+									<td>能完成动作，耗时较长或伴有抖动</td>
+								</tr>
+								<tr>
+									<td>3级</td>
+									<td>快速且匀速无抖动的完成动作要求</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="graph">
+						<div id="pie3"></div>
+						<div id="pie4"></div>
+					</div>
+				</section>
+				
+				<section id="part2">
+					<form method="post" action="" enctype="multipart/form-data">
+						<div class="patient">
+							<p>请选择康复中的患者</p>
+							<div class="option">
+								<div class="select-user">请选择</div>
+								<ul id="patients">
+									
+								</ul>
+								<input name="user" type="hidden" id="user" value="-1"/>
+							</div>
+						</div>
+						
+						<p>请选择上传的txt文件</p>
+						<div class="file-group">
+							<div class="file-upload">
+								<input type="file" id="filer_input" class="filer_input" name="file1" accept=".txt"/>
+								<div class="show-file">
+									<div class="no-file">
+										<img src="./images/upload.svg" />
+									</div>
+									<div class="have-file">
+										<img src="./images/text.png" />
+										<div class="file-info">
+											<span class="file-name"></span><span class="file-size"></span>
+										</div>
+									</div>
+									<div class="do-name">前平举</div>
+								</div>
+							</div>
+							<div class="file-upload">
+								<input type="file" id="filer_input" class="filer_input" name="file2" accept=".txt"/>
+								<div class="show-file">
+									<div class="no-file">
+										<img src="./images/upload.svg" />
+									</div>
+									<div class="have-file">
+										<img src="./images/text.png" />
+										<div class="file-info">
+											<span class="file-name"></span><span class="file-size"></span>
+										</div>
+									</div>
+									<div class="do-name">小臂前平举</div>
+								</div>
+							</div>
+							<div class="file-upload">
+								<input type="file" id="filer_input" class="filer_input" name="file3" accept=".txt"/>
+								<div class="show-file">
+									<div class="no-file">
+										<img src="./images/upload.svg" />
+									</div>
+									<div class="have-file">
+										<img src="./images/text.png" />
+										<div class="file-info">
+											<span class="file-name"></span><span class="file-size"></span>
+										</div>
+									</div>
+									<div class="do-name">屈臂上举</div>
+								</div>
+							</div>
+						</div>
+						<div class="file-group">
+							<div class="file-upload">
+								<input type="file" id="filer_input" class="filer_input" name="file4" accept=".txt"/>
+								<div class="show-file">
+									<div class="no-file">
+										<img src="./images/upload.svg" />
+									</div>
+									<div class="have-file">
+										<img src="./images/text.png" />
+										<div class="file-info">
+											<span class="file-name"></span><span class="file-size"></span>
+										</div>
+									</div>
+									<div class="do-name">后摆</div>
+								</div>
+							</div>
+							<div class="file-upload">
+								<input type="file" id="filer_input" class="filer_input" name="file5" accept=".txt"/>
+								<div class="show-file">
+									<div class="no-file">
+										<img src="./images/upload.svg" />
+									</div>
+									<div class="have-file">
+										<img src="./images/text.png" />
+										<div class="file-info">
+											<span class="file-name"></span><span class="file-size"></span>
+										</div>
+									</div>
+									<div class="do-name">侧平举</div>
+								</div>
+							</div>
+							<div class="file-upload">
+								<input type="file" id="filer_input" class="filer_input" name="file6" accept=".txt"/>
+								<div class="show-file">
+									<div class="no-file">
+										<img src="./images/upload.svg" />
+									</div>
+									<div class="have-file">
+										<img src="./images/text.png" />
+										<div class="file-info">
+											<span class="file-name"></span><span class="file-size"></span>
+										</div>
+									</div>
+									<div class="do-name">直举过头顶</div>
+								</div>
+							</div>
+						</div>
+						<input class="submit" type="button" value="提交"/>
+					</form>
+					<div class="data-pre">
+						<p>数据预览</p>
+						<table class="data-table">
+							<tr>
+								<td>加速度X(g)</td>
+								<td>加速度Y(g)</td>
+								<td>加速度Z(g)</td>
+								<td>角速度X(°/s)</td>
+								<td>角速度Y(°/s)</td>
+								<td>角速度Z(°/s)</td>
+							</tr>
+							<tr>
+								<td rowspan="3" colspan="6" class="data-tip">暂无数据</td>
+							</tr>
+						</table>
+					</div>
+					<div class="mask-info" style="display: none;">
+						<div class="upload-tip">
+							<span class="file-tip">数据上传评级中</span>
+						</div>
+					</div>
+				</section>
+				
+				<section id="part3">
+					<div class="user-content">
+						<ul class="user-data-info">
+							
+						</ul>
+						<div class="exercise">
+							<div class="user-table">
+								<table class="table-data">
+									<tr>
+										<td>用户编号</td>
+										<td>用户名称</td>
+										<td>训练时间</td>
+										<td>训练动作</td>
+										<td>训练肌群</td>
+										<td>训练评分</td>
+										<td>操作</td>
+									</tr>
+								</table>
+							</div>
+							<div class="user-graph">
+								<div id="pie-user"></div>
+							</div>
+							<div class="user-graph">
+								<div id="do0" class="linear-user"></div>
+								<div id="do1" class="linear-user"></div>
+							</div>
+							<div class="user-graph">
+								<div id="do2" class="linear-user"></div>
+								<div id="do3" class="linear-user"></div>
+							</div>
+							<div class="user-graph">
+								<div id="do4" class="linear-user"></div>
+								<div id="do5" class="linear-user"></div>
+							</div>
+						</div>
+					</div>
+				</section>
+				
+			</section>
+		</main>
+		<script type="text/javascript" src="./js/jquery.min.js"></script>
+		<script type="text/javascript" src="./js/echarts.min.js"></script>
+		<script type="text/javascript" src="./js/dataTool.min.js"></script>
+		<script type="text/javascript" src="./js/homePage.js"></script>
+		<script type="text/javascript" src="./js/fileupload.js"></script>
+		<script type="text/javascript" src="./js/userData.js"></script>
+	</body>
+</html>

@@ -1,0 +1,238 @@
+@CHARSET "UTF-8";
+*{
+	margin: 0px;
+	padding: 0px;
+	outline: none
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  color: #fff;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 20px;
+}
+
+a.forum {
+  margin-left: 10px;
+  margin-top: 20px;
+  text-decoration: none;
+  float: left;
+  cursor: pointer;
+  font-size: 0;
+}
+
+a.forum > img {
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+}
+
+a.forum > span {
+  vertical-align: middle;
+  font-size: 36px;
+  line-height: 43px;
+  margin-left: 6px;
+  color: #ffffff;
+}
+.main{
+  height: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../images/background.jpg);
+}
+.right{
+  position: relative;
+  width: calc(100% - 480px);
+  height: 100%;
+  margin-left: 480px;
+  box-sizing: border-box;
+}
+.pw{
+  width: 480px;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -240px;
+  margin-top: -250px;
+  display:none;
+}
+.signIn{
+  width: 480px;
+  height: 600px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -240px;
+  margin-top: -300px;
+}
+.register{
+  width: 480px;
+  height: 600px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -240px;
+  margin-top: -300px;
+  display:none;
+}
+.welcome{
+  font-size: 44px;
+  line-height: 62px;
+}
+.talk{
+  margin-top: 13px;
+  height: 34px;
+}
+.day{
+  font-size: 27px;
+  line-height: 34px;
+  float: left;
+}
+form{
+  margin-top: 63px;
+}
+input{
+  width: 480px;
+  height: 52px;
+  box-sizing: border-box;
+  border: 1px solid #aaaaaa;
+  border-radius: 4px;
+  padding: 15px 20px;
+  font-size: 19px;
+}
+.name{
+  margin-bottom: 30px;
+}
+form div,input.password,input.email{
+  margin-bottom: 30px;
+}
+form div input{
+  float: right;
+  width: 307px;
+}
+::placeholder{
+  color: #aaaaaa;
+  font-size: 19px;
+}
+button{
+  margin-top: 38px;
+  width: 480px;
+  height: 60px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  box-shadow: 0px 5px 8px rgba(24,95,255,0.1);
+  background-color: #3487ff;
+  border: 1px solid #3083ff;
+  font-size: 24px;
+  font-weight: 200;
+  line-height: 60px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.pw button{
+	margin-top: 0px;
+}
+
+form div{
+	width: 480px;
+}
+form div a{
+	cursor: pointer;
+	margin-top: 10px;
+	font-size: 18px;
+  	line-height: 18px;
+}
+form div a:nth-child(1){
+	float: left;
+}
+form div a:nth-child(2){
+	float: right;
+}
+.register form input{
+	margin-bottom: 20px;
+	height: 46px;
+	font-size: 17px;
+}
+.register form button{
+	margin-top: 1px;
+}
+
+form div img{
+	width: 154px;
+	height: 46px;
+	border-radius: 4px;
+}
+form div .code2{
+	display: inline-block;
+	width: 154px;
+	height: 44px;
+	border-radius: 4px;
+  	box-sizing: border-box;
+  	box-shadow: 0px 5px 8px rgba(24,95,255,0.1);
+  	background-color: #3487ff;
+  	border: 1px solid #3083ff;
+  	color: #ffffff;
+  	text-align: center;
+  	line-height: 17px;
+  	cursor: pointer;
+  	font-size: 16px;
+  	margin-top: 1px;
+}
+form div .code1{
+	display: inline-block;
+	width: 154px;
+	height: 49px;
+	border-radius: 4px;
+  	box-sizing: border-box;
+  	box-shadow: 0px 5px 8px rgba(24,95,255,0.1);
+  	background-color: #3487ff;
+  	border: 1px solid #3083ff;
+  	color: #ffffff;
+  	text-align: center;
+  	line-height: 46px;
+  	cursor: pointer;
+  	font-size: 16px;
+}
+
+.tip{
+	font-size: 18px;
+	text-align: center;
+	color: #ff0000;
+	width: 480px;
+	height: 23px;
+	margin-bottom: 10px;
+}
+
+.signIn button{
+	margin-top: 0px;
+}
